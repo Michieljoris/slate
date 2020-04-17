@@ -262,7 +262,7 @@ html, body {
   // I know, it's hackish, but it's the simplist way to make the left
   // half of the content always this background color.
   .dark-box {
-    width: $examples-width;
+    width: 18%; // $examples-width;
     background-color: $examples-bg;
     position: absolute;
     right: 0;
@@ -327,7 +327,7 @@ html, body {
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
-    margin-right: $examples-width;
+    margin-right: 20%; //$examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
@@ -364,7 +364,7 @@ html, body {
   h2 {
     @extend %header-font;
     font-size: 19px;
-    margin-top: 4em;
+    margin-top: 1em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
@@ -516,7 +516,7 @@ html, body {
     color: #fff;
 
     margin: 0;
-    width: $examples-width;
+    width: 80%; // $examples-width;
 
     float:right;
     clear:right;
@@ -612,4 +612,24 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.content {
+  .center-column + pre {
+    position: static;
+    float: none;
+    clear: none;
+    margin: 0 0px;
+    left: 0;
+  }
+}
+
+.center-column {
+    float: left !important;
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    clear: none !important;
+    // margin-right: $examples-width !important;
+    // width: 50% !important;     // May need to adjust this
+    // text-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 }
