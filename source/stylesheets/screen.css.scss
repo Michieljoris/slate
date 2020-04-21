@@ -327,7 +327,7 @@ html, body {
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
-    margin-right: 20%; //$examples-width;
+    margin-right: 18%; //$examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
@@ -363,10 +363,10 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 19px;
+    font-size: 25px;
     margin-top: 1em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
+    // border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.2), rgba(#fff, 0));
@@ -382,7 +382,7 @@ html, body {
   h3, h4, h5, h6 {
     @extend %header-font;
     font-size: 15px;
-    margin-top: 2.5em;
+    margin-top: 0.7em;
     margin-bottom: 0.8em;
   }
 
@@ -511,15 +511,38 @@ html, body {
 // This is all the stuff that appears in the right half of the page
 
 .content {
-  pre, blockquote {
+  pre {
     background-color: $code-bg;
     color: #fff;
 
     margin: 0;
-    width: 80%; // $examples-width;
+    width: 82%; // $examples-width;
 
     float:right;
     clear:right;
+
+    box-sizing: border-box;
+
+    @extend %right-col;
+
+    &>p { margin: 0; }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: dashed 1px #ccc;
+    }
+  }
+  blockquote {
+    // background-color: $code-bg;
+    // color: #fff;
+
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 12px;
+    width: 80%; // $examples-width;
+    // float:right;
+    // clear:right;
 
     box-sizing: border-box;
 
@@ -543,9 +566,13 @@ html, body {
 
   blockquote {
     &>p {
-      background-color: $code-annotation-bg;
-      padding: $code-annotation-padding 2em;
-      color: #eee;
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: .25em solid #dfe2e5;
+
+      // background-color: $code-annotation-bg;
+      // padding: $code-annotation-padding 2em;
+      // color: #eee;
     }
   }
 }
@@ -621,6 +648,7 @@ html, body {
     clear: none;
     margin: 0 0px;
     left: 0;
+    margin-bottom: 8px;
   }
 }
 

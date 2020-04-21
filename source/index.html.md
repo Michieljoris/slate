@@ -1,1 +1,1 @@
-../../clojure/aum-starter-app/docs/aum/doc.md
+../../clojure/aum-docs/doc.md
