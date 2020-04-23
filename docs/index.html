@@ -456,7 +456,14 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='table-of-contents'>Table of Contents</h1>
+        <hr>
+
+<p>title: Aum docs</p>
+
+<p>toc_footers:
+  - <a href='https://www.github.com/Michieljoris/aum'>Aum on github</a>
+  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></p>
+<h2 id='search-true'>search: true</h2><h1 id='table-of-contents'>Table of Contents</h1>
 <ol>
 <li> <a href="#orgf29fc1d">Getting started</a>
 
@@ -742,6 +749,8 @@ graphql and falcor in a less cumbersome and more flexible manner.&ldquo;</p>
 <p>To pull in all the tools and libs to build an aum app add</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="n">aum</span><span class="w"> </span><span class="p">{</span><span class="no">:git/url</span><span class="w"> </span><span class="s">"https://github.com/michieljoris/aum.git"</span><span class="n">,</span><span class="w">
          </span><span class="no">:sha</span><span class="w"> </span><span class="s">"577daf362c3f81e08d43f654ef0bbf3ddc93e015"</span><span class="w">
          </span><span class="no">:tag</span><span class="w"> </span><span class="s">"master"</span><span class="p">}</span><span class="n">,</span><span class="w">
@@ -755,6 +764,8 @@ following section.</p>
 <h2 id='starter-app'>Starter app</h2>
 <p>There is a <a href="https://github.com/Michieljoris/aum-starter-app">repo</a> that&rsquo;s an app using aum libs, but has minimal content. This can
 be used to try out building features/pages.</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    git clone https://github.com/Michieljoris/aum-starter-app.git
@@ -777,12 +788,16 @@ be used to try out building features/pages.</p>
 <p>In the starter repo do:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    nvm install
     nvm use
 </code></pre>
 <p>to make sure the proper version of node is used.</p>
 
 <p>And then:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/dev-install
@@ -808,11 +823,15 @@ Also sometimes you only need or want to work on the backend.</p>
 <p>After bin/dev-install:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/dev-backend
 </code></pre>
 <p>which will get you a clj repl in the terminal and an nrepl server.</p>
 
 <p>To set config settings, for example the db, do:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    <span class="nv">DB_NAME</span><span class="o">=</span>chinchilla bin/dev-backend
@@ -827,6 +846,8 @@ revolt.plugin/rebel key). In deps.edn src-dev should be included in a paths
 vector.</p>
 
 <p>To compile the frontend, in another terminal do:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/dev-frontend
@@ -862,6 +883,8 @@ pagora.clj-utils deps in deps.edn.</p>
 <p>Build production jar at <code>dist/app.ja</code> with:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/prod-build
 </code></pre>
 <p>This&rsquo;ll fetch node modules and build the js bundle as well.</p>
@@ -872,14 +895,20 @@ like by setting the various environment variables and run jar (in dist dir):</p>
 <p>TODO-aum: test starter app prod jar!!!</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    <span class="nv">CLJ_ENV</span><span class="o">=</span>prod <span class="nv">DB_USER</span><span class="o">=</span><span class="nb">test </span><span class="nv">DB_PASSWORD</span><span class="o">=</span>abc <span class="nv">DB_URL</span><span class="o">=</span><span class="s2">"//localhost:3306/"</span> <span class="nv">DB_NAME</span><span class="o">=</span>chinchilla_development <span class="nv">QUERY_LOG</span><span class="o">=</span><span class="nb">true </span><span class="nv">SQL_LOG</span><span class="o">=</span><span class="nb">true </span><span class="nv">HTTP_LOG</span><span class="o">=</span><span class="nb">false </span><span class="nv">SERVER_PORT</span><span class="o">=</span>8081 <span class="nv">SERVER_IP</span><span class="o">=</span>0.0.0.0 <span class="nv">NEW_RELIC_LICENSE_KEY</span><span class="o">=</span><span class="s2">"&lt;some newrelic key&gt;"</span> java -javaagent:./newrelic-agent.jar -Dnewrelic.config.file<span class="o">=</span>./newrelic.yml   -Dnewrelic.environment<span class="o">=</span>production -jar dist/aum.jarlk
 </code></pre>
 <p>or just</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/prod-run
 </code></pre>
 <p>Or all in one cmd:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/prod-build-and-run
@@ -986,6 +1015,8 @@ key :app/page in app state.</p>
 For instance:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nb">doseq</span><span class="w"> </span><span class="p">[</span><span class="n">page</span><span class="w"> </span><span class="p">[</span><span class="no">:page/some-page</span><span class="w"> </span><span class="no">:page/some-other-page</span><span class="p">]]</span><span class="w">
       </span><span class="p">(</span><span class="nf">aum/derive-om-query-key!</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="no">:page/*</span><span class="p">))</span><span class="w">
 
@@ -1013,6 +1044,8 @@ db-&gt;tree fn actually behaves the same way as the standard om-next db-&gt;tree
 <p>The actual read function passed to the om parser basically does this:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nf">db-&gt;tree</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="p">{</span><span class="no">:query</span><span class="w"> </span><span class="n">root-component-query</span><span class="w">
                    </span><span class="no">:data</span><span class="w">  </span><span class="n">app-state</span><span class="w">
                    </span><span class="no">:refs</span><span class="w">  </span><span class="n">app-state</span><span class="p">})</span><span class="w">
@@ -1031,6 +1064,8 @@ define them in components).</p>
 <p>You either mutate frontend app-state:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">mutate</span><span class="w"> </span><span class="ss">'admin/set-key</span><span class="w">
       </span><span class="p">[{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">state</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">env</span><span class="p">}</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="p">{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="nb">key</span><span class="w"> </span><span class="n">value</span><span class="p">]}]</span><span class="w">
       </span><span class="p">{</span><span class="no">:action</span><span class="w"> </span><span class="p">(</span><span class="k">fn</span><span class="w"> </span><span class="p">[]</span><span class="w">
@@ -1041,6 +1076,8 @@ define them in components).</p>
 app state as an atom.</p>
 
 <p>And/or you set a key that&rsquo;s a defined remote in the returned map to true:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">mutate</span><span class="w"> </span><span class="ss">'app/test</span><span class="w">
@@ -1057,6 +1094,8 @@ mutation has finished and the data has been returned. For every mutation method
 you can define a same name post-remote method. This is called with the value as
 returned from the backend. Here you can do error handling for instance or &rsquo;clean
 up&rsquo; the response <em>before</em> it get merged with app state.</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">post-remote</span><span class="w"> </span><span class="ss">'app/test</span><span class="w">
@@ -1155,6 +1194,8 @@ the app with <code>CLJ_ENV=[production|staging|testing|dev]</code> to set the en
 <p>Config is defined in multimethods like this, for instance in app.config:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nf">ns</span><span class="w"> </span><span class="n">app.config</span><span class="p">)</span><span class="w">
 
     </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/config</span><span class="w"> </span><span class="no">:common</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="w">
@@ -1235,6 +1276,8 @@ on role of the user, method (sql fn keyword). Extend this method for tables you
 want created/deleted/updated.</p>
 
 <p>A simple database config for a user table for example is this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">def</span><span class="w"> </span><span class="n">schema</span><span class="w"> </span><span class="p">{</span><span class="no">:id</span><span class="w"> </span><span class="no">:int</span><span class="w">
@@ -1335,6 +1378,8 @@ selected-record component add a generic query for a record such as this:</p></li
 </ol>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">        </span><span class="p">[({</span><span class="no">:user</span><span class="w"> </span><span class="p">[</span><span class="no">:id</span><span class="w"> </span><span class="no">:name</span><span class="p">]}</span><span class="w"> </span><span class="p">{</span><span class="no">:where</span><span class="w"> </span><span class="p">[</span><span class="no">:id</span><span class="w"> </span><span class="no">:=</span><span class="w"> </span><span class="n">nil</span><span class="p">]})]</span><span class="w">
 </span></code></pre>
 <p>and a remote read method for :user where you modify the remote query&rsquo;s params and set
@@ -1393,9 +1438,13 @@ om-next read methods.</li>
 </ol>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/read</span><span class="w"> </span><span class="p">[</span><span class="no">:value</span><span class="w"> </span><span class="no">:bar</span><span class="p">]</span><span class="w"> </span><span class="p">[{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">query</span><span class="w"> </span><span class="n">context-data</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">env</span><span class="p">}</span><span class="w"> </span><span class="nb">key</span><span class="w"> </span><span class="n">params</span><span class="p">]</span><span class="w"> </span><span class="n">...</span><span class="p">)</span><span class="w">
 </span></code></pre>
 <p>for a app state structure like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:foo</span><span class="w"> </span><span class="p">{</span><span class="no">:bar</span><span class="w"> </span><span class="p">{</span><span class="no">:k1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="mi">2</span><span class="p">}}}</span><span class="w">
@@ -1403,9 +1452,13 @@ om-next read methods.</li>
 <p>and a root query of:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">[{</span><span class="no">:foo</span><span class="w"> </span><span class="p">[{</span><span class="no">:bar</span><span class="w"> </span><span class="p">[</span><span class="no">:k1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="no">:k3</span><span class="p">]}]}]</span><span class="w">
 </span></code></pre>
 <p>receives env like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:query</span><span class="w"> </span><span class="p">[</span><span class="no">:k1</span><span class="w"> </span><span class="no">:2</span><span class="p">]</span><span class="w">
@@ -1418,6 +1471,8 @@ om-next read methods.</li>
 <p>and should return for example this:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:k1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>2.  REMOTE example</p>
@@ -1425,9 +1480,13 @@ om-next read methods.</li>
 <p>The method (note the :aum in the dispatch vector):</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/read</span><span class="w"> </span><span class="p">[</span><span class="no">:aum</span><span class="w"> </span><span class="no">:bar</span><span class="p">]</span><span class="w"> </span><span class="p">[{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">query</span><span class="w"> </span><span class="n">context-data</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">env</span><span class="p">}</span><span class="w"> </span><span class="nb">key</span><span class="w"> </span><span class="n">params</span><span class="p">]</span><span class="w"> </span><span class="n">...</span><span class="p">)</span><span class="w">
 </span></code></pre>
 <p>for a app state structure like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:foo</span><span class="w"> </span><span class="p">{</span><span class="no">:bar</span><span class="w"> </span><span class="p">{</span><span class="no">:k1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="mi">2</span><span class="p">}}}</span><span class="w">
@@ -1435,9 +1494,13 @@ om-next read methods.</li>
 <p>and a root query of:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">[{</span><span class="no">:foo</span><span class="w"> </span><span class="p">[{</span><span class="no">:bar</span><span class="w"> </span><span class="p">[</span><span class="no">:k1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="no">:k3</span><span class="p">]}]}]</span><span class="w">
 </span></code></pre>
 <p>receives env like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:query</span><span class="w"> </span><span class="p">[</span><span class="no">:k1</span><span class="w"> </span><span class="no">:k2</span><span class="w"> </span><span class="no">:k3</span><span class="p">]</span><span class="w">
@@ -1450,14 +1513,20 @@ om-next read methods.</li>
 <p>and should return for example this:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">{</span><span class="no">:bar</span><span class="w"> </span><span class="p">[</span><span class="no">:k3</span><span class="p">]}</span><span class="w">
 </span></code></pre>
 <p>to create a remote query like this:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">[{</span><span class="no">:foo</span><span class="w"> </span><span class="p">[{</span><span class="no">:bar</span><span class="w"> </span><span class="p">[</span><span class="no">:k3</span><span class="p">]}]}]</span><span class="w">
 </span></code></pre>
 <p>If you want to keep the params (or add, or modify) return something like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">(</span><span class="nf">cond-&gt;</span><span class="w"> </span><span class="p">{</span><span class="no">:bar</span><span class="w"> </span><span class="p">[</span><span class="no">:k3</span><span class="p">]}</span><span class="w">
@@ -1470,6 +1539,8 @@ om-next read methods.</li>
         selected to display. By setting the selected page in app state you can (by using
         key inheritance and multimethods) only return a remote for a key that matches
         that page:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">            </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/read</span><span class="w"> </span><span class="p">[</span><span class="no">:value</span><span class="w"> </span><span class="no">:page/*</span><span class="p">]</span><span class="w">
@@ -1536,6 +1607,8 @@ om-next read methods.</li>
 <p>Use of that is simple:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">        </span><span class="p">(</span><span class="nf">db-&gt;tree</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="p">{</span><span class="no">:query</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="c1">;;Apply this query</span><span class="w">
                        </span><span class="no">:data</span><span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="c1">;;to this data</span><span class="w">
                        </span><span class="no">:refs</span><span class="w">  </span><span class="n">app-data</span><span class="w"> </span><span class="c1">;;looking up idents (refs) here.</span><span class="w">
@@ -1554,6 +1627,8 @@ context data for that key.</p>
 <h2 id='make-cmp-and-om-data'>make-cmp and om-data</h2>
 <p>Use pagora.aum.frontend.util/make-cmp function to create a function that you can
 use in your render function in other components:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nf">defui</span><span class="w"> </span><span class="o">^</span><span class="no">:once</span><span class="w"> </span><span class="n">Foo</span><span class="w">
@@ -1577,6 +1652,8 @@ use in your render function in other components:</p>
 
 <p>So call this foo function with the <code>this</code> of the parent component and the
 key you set the query of Foo to:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nf">defui</span><span class="w"> </span><span class="o">^</span><span class="no">:once</span><span class="w"> </span><span class="n">RootQbucketList</span><span class="w">
@@ -1667,8 +1744,12 @@ the original sql query has been done. The sql-fn called, its args and
 calc-params as passed fromt the frontend.</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">[{</span><span class="no">:group</span><span class="w"> </span><span class="p">[({</span><span class="no">:user</span><span class="w"> </span><span class="p">[</span><span class="no">:id</span><span class="w"> </span><span class="no">:name</span><span class="p">]}</span><span class="w"> </span><span class="p">{</span><span class="no">:with-meta</span><span class="w"> </span><span class="p">[</span><span class="no">:count</span><span class="w"> </span><span class="p">{</span><span class="no">:type</span><span class="w"> </span><span class="no">:calc2</span><span class="w"> </span><span class="no">:some</span><span class="w"> </span><span class="no">:params</span><span class="p">}]})]}]</span><span class="w">
 </span></code></pre>
+<div class="center-column"></div>
+
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">calc-meta-data</span><span class="w"> </span><span class="no">:count</span><span class="w">
       </span><span class="p">[</span><span class="n">env</span><span class="w"> </span><span class="n">rows</span><span class="w"> </span><span class="p">{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">sql-fn</span><span class="w"> </span><span class="n">sql-fn-args</span><span class="w"> </span><span class="n">return-empty-vector?</span><span class="w"> </span><span class="n">join-type</span><span class="w"> </span><span class="n">calculation-params</span><span class="p">]}]</span><span class="w">
@@ -1677,6 +1758,8 @@ calc-params as passed fromt the frontend.</p>
 </span></code></pre>
 <p>One thing to take note of is that the return value for this query will be now of
 the form:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">{</span><span class="no">:rows</span><span class="w"> </span><span class="p">[[</span><span class="no">:id</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="no">:name</span><span class="w"> </span><span class="s">"foo"</span><span class="p">]]</span><span class="w"> </span><span class="no">:meta</span><span class="w"> </span><span class="p">{</span><span class="no">:count</span><span class="w"> </span><span class="mi">123</span><span class="p">}}</span><span class="w">
@@ -1690,6 +1773,8 @@ your component, and/or when you implement the read method for the join with the
 <p>Such as:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/read</span><span class="w"> </span><span class="no">:calc/count</span><span class="w">
       </span><span class="p">[{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">user</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="n">parser</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">parser-config</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">env</span><span class="p">}</span><span class="w"> </span><span class="n">_</span><span class="w">
        </span><span class="p">{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">table</span><span class="w"> </span><span class="n">where</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">params</span><span class="p">}]</span><span class="w">
@@ -1698,6 +1783,8 @@ your component, and/or when you implement the read method for the join with the
       </span><span class="p">{</span><span class="no">:value</span><span class="w"> </span><span class="p">{</span><span class="no">:count</span><span class="w"> </span><span class="p">(</span><span class="nf">count-records</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">params</span><span class="p">)}})</span><span class="w">
 </span></code></pre>
 <p>Then add a query to a component:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">({</span><span class="no">:calc/count</span><span class="w"> </span><span class="p">[</span><span class="no">:count</span><span class="p">]}</span><span class="w"> </span><span class="p">{</span><span class="no">:table</span><span class="w"> </span><span class="no">:user</span><span class="w">
@@ -1718,12 +1805,16 @@ method. Where you can then return a calculated value, any rows queried for
 and/or any other data you like.</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defmethod</span><span class="w"> </span><span class="n">aum/read</span><span class="w"> </span><span class="no">:count-records</span><span class="w">
       </span><span class="p">[{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">user</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="n">parser</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">parser-config</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">env</span><span class="p">}</span><span class="w"> </span><span class="n">_</span><span class="w">
        </span><span class="p">{</span><span class="no">:keys</span><span class="w"> </span><span class="p">[</span><span class="n">table</span><span class="w"> </span><span class="n">where</span><span class="p">]</span><span class="w"> </span><span class="no">:as</span><span class="w"> </span><span class="n">params</span><span class="p">}]</span><span class="w">
       </span><span class="p">{</span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="nf">count-records</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">params</span><span class="p">)})</span><span class="w">
 </span></code></pre>
 <p>With this query:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="o">'</span><span class="p">({</span><span class="no">:user-count</span><span class="w"> </span><span class="p">[</span><span class="no">:count</span><span class="p">]}</span><span class="w"> </span><span class="p">{</span><span class="no">:custom-read</span><span class="w"> </span><span class="no">:count-records</span><span class="w">
@@ -1740,6 +1831,8 @@ and/or any other data you like.</p>
 <h2 id='frontend-testing'>Frontend testing</h2>
 <p><a id="orgeddb80d"></a></p>
 <h3 id='install-3'>Install</h3>
+<div class="center-column"></div>
+
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    nvm install
     nvm use
@@ -1834,6 +1927,8 @@ queries to the parser.</p></li>
 <p><a id="org01bf845"></a></p>
 <h2 id='in-boot-scripts-there-rsquo-s-tail-boot-to-inspect-logstash-output'>In boot-scripts there&rsquo;s tail.boot to inspect logstash output:</h2>
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    boot boot-scripts/tail.boot -h
 
     Options:
@@ -1867,11 +1962,15 @@ where the js global var name can be referred to by a clojure symbol ns</li>
 <p>Analyze size of webpack bundle:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    npx webpack --config webpack.prod.js --json &gt; stats.json
 </code></pre>
 <p>Upload stat.json to <a href="https://chrisbateman.github.io/webpack-visualizer/">https://chrisbateman.github.io/webpack-visualizer/</a></p>
 
 <p>Or:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    bin/analyze-webpackold-app-readme
@@ -1883,6 +1982,8 @@ where the js global var name can be referred to by a clojure symbol ns</li>
 <p>In <code>pagora.aum.frontend.reconciler.start</code> this function is defined:</p>
 
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">make-aum-remote</span><span class="w"> </span><span class="p">[</span><span class="n">app-config</span><span class="p">]</span><span class="w">
       </span><span class="p">(</span><span class="k">fn</span><span class="w"> </span><span class="p">[</span><span class="n">query</span><span class="w"> </span><span class="n">response-cb</span><span class="p">]</span><span class="w">
         </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">[</span><span class="n">chsk-send!</span><span class="w"> </span><span class="p">(</span><span class="nf">websocket/get-chsk-send!-fn</span><span class="w"> </span><span class="n">app-config</span><span class="p">)]</span><span class="w">
@@ -1890,6 +1991,8 @@ where the js global var name can be referred to by a clojure symbol ns</li>
                       </span><span class="n">response-cb</span><span class="p">))))</span><span class="w">
 </span></code></pre>
 <p>You can add remotes like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">{</span><span class="no">:my-remote</span><span class="w"> </span><span class="p">(</span><span class="k">fn</span><span class="w"> </span><span class="p">[</span><span class="n">app-config</span><span class="p">]</span><span class="w">
@@ -1939,10 +2042,14 @@ Which I do in my parser read* fn</p>
 <p><a id="orgec13ee6"></a></p>
 <h2 id='start-app-with-different-ports-and-db'>Start app with different ports and db:</h2>
 <div class="center-column"></div>
+
+<div class="center-column"></div>
 <pre class="highlight shell tab-shell"><code>    <span class="nv">DB_NAME</span><span class="o">=</span>my_db <span class="nv">SERVER_PORT</span><span class="o">=</span>9080 <span class="nv">NREPL_PORT</span><span class="o">=</span>38401 bin/dev-backend
 </code></pre>
 <p><a id="org85a6e19"></a></p>
 <h2 id='throw-catch-exceptions'>throw catch exceptions</h2>
+<div class="center-column"></div>
+
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">(</span><span class="nf">try</span><span class="w"> </span><span class="p">(</span><span class="nf">throw</span><span class="w"> </span><span class="p">(</span><span class="nf">ex-info</span><span class="w"> </span><span class="s">"ex-info msg string"</span><span class="w"> </span><span class="p">{</span><span class="no">:type</span><span class="w"> </span><span class="no">:my-exception</span><span class="w"> </span><span class="no">:bla</span><span class="w"> </span><span class="no">:foo</span><span class="p">}))</span><span class="w">
         </span><span class="p">(</span><span class="nf">catch</span><span class="w"> </span><span class="o">#</span><span class="n">?</span><span class="p">(</span><span class="no">:clj</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="no">:cljs</span><span class="w"> </span><span class="no">:default</span><span class="p">)</span><span class="w"> </span><span class="n">e</span><span class="w">
@@ -1984,6 +2091,8 @@ Must return a value that has the shape implied by the grammar element being read
 <p><a id="orga5fa727"></a></p>
 <h2 id='syncing-of-front-and-backend'>Syncing of front and backend</h2>
 <p>All records have as their meta data something like this:</p>
+
+<div class="center-column"></div>
 
 <div class="center-column"></div>
 <pre class="highlight clojure tab-clojure"><code><span class="w">    </span><span class="p">{</span><span class="no">:record</span><span class="w"> </span><span class="p">{</span><span class="no">:id</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="no">:type</span><span class="w"> </span><span class="no">:foo</span><span class="w"> </span><span class="no">:name</span><span class="w"> </span><span class="s">"bar"</span><span class="p">}</span><span class="w"> </span><span class="c1">;;record as it came from the servr</span><span class="w">
